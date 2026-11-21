@@ -1,0 +1,147 @@
+[
+  {
+    "id": "aljazeera",
+    "name": "الجزيرة نت",
+    "lang": "ar",
+    "url": "https://www.aljazeera.net/aljazeerarss/a7c186be-1baa-4bd4-9d80-a84db769f779/73d0e1b4-532f-45ef-b135-bfdff8b8cab9"
+  },
+  {
+    "id": "bbcarabic",
+    "name": "BBC عربي",
+    "lang": "ar",
+    "url": "https://feeds.bbci.co.uk/arabic/rss.xml"
+  },
+  {
+    "id": "france24",
+    "name": "فرانس 24",
+    "lang": "ar",
+    "url": "https://www.france24.com/ar/rss"
+  },
+  {
+    "id": "skynews",
+    "name": "سكاي نيوز عربية",
+    "lang": "ar",
+    "url": "https://www.skynewsarabia.com/rss.xml"
+  },
+  {
+    "id": "alarabiya",
+    "name": "العربية",
+    "lang": "ar",
+    "url": "https://www.alarabiya.net/feed/rss2/ar.xml"
+  },
+  {
+    "id": "cnnarabic",
+    "name": "CNN بالعربية",
+    "lang": "ar",
+    "url": "https://arabic.cnn.com/api/v1/rss/rss.xml"
+  },
+  {
+    "id": "dwarabic",
+    "name": "DW عربية",
+    "lang": "ar",
+    "url": "https://rss.dw.com/rdf/rss-ar-all"
+  },
+  {
+    "id": "euronews",
+    "name": "يورونيوز عربي",
+    "lang": "ar",
+    "url": "https://arabic.euronews.com/rss"
+  },
+  {
+    "id": "rtarabic",
+    "name": "RT عربي",
+    "lang": "ar",
+    "url": "https://arabic.rt.com/rss/"
+  },
+  {
+    "id": "aawsat",
+    "name": "الشرق الأوسط",
+    "lang": "ar",
+    "url": "https://aawsat.com/feed"
+  },
+  {
+    "id": "ajenglish",
+    "name": "Al Jazeera English",
+    "lang": "en",
+    "url": "https://www.aljazeera.com/xml/rss/all.xml"
+  },
+  {
+    "id": "bbcworld",
+    "name": "BBC World",
+    "lang": "en",
+    "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+  },
+  {
+    "id": "syriatv",
+    "name": "تلفزيون سوريا",
+    "lang": "ar",
+    "urls": [
+      "https://www.syria.tv/rss.xml",
+      "https://www.syria.tv/rss",
+      "https://news.google.com/rss/search?q=site:syria.tv+when:2d&hl=ar&gl=SY&ceid=SY:ar"
+    ]
+  },
+  {
+    "id": "alikhbariah",
+    "name": "الإخبارية السورية",
+    "lang": "ar",
+    "urls": [
+      "https://alikhbariah.com/feed/",
+      "https://www.alikhbariah.com/feed/",
+      "https://alikhbariya.sy/feed/",
+      "https://news.google.com/rss/search?q=site:alikhbariah.com+when:2d&hl=ar&gl=SY&ceid=SY:ar",
+      "https://news.google.com/rss/search?q=%22%D8%A7%D9%84%D8%A5%D8%AE%D8%A8%D8%A7%D8%B1%D9%8A%D8%A9+%D8%A7%D9%84%D8%B3%D9%88%D8%B1%D9%8A%D8%A9%22+when:2d&hl=ar&gl=SY&ceid=SY:ar"
+    ]
+  },
+  {
+    "id": "halabtoday",
+    "name": "حلب اليوم",
+    "lang": "ar",
+    "urls": [
+      "https://halabtodaytv.net/feed",
+      "https://halabtodaytv.net/rss",
+      "https://news.google.com/rss/search?q=site:halabtodaytv.net+when:2d&hl=ar&gl=SY&ceid=SY:ar"
+    ]
+  },
+  {
+    "id": "orient",
+    "name": "أورينت",
+    "lang": "ar",
+    "enabled": false,
+    "note": "أُغلقت المؤسسة نهائياً في 21 نوفمبر 2023",
+    "urls": [
+      "https://www.orient-news.net/ar/rss",
+      "https://news.google.com/rss/search?q=site:orient-news.net+when:2d&hl=ar&gl=SY&ceid=SY:ar"
+    ]
+  },
+  {
+    "id": "samatv",
+    "name": "قناة سما",
+    "lang": "ar",
+    "urls": [
+      "https://sama-tv.net/feed",
+      "https://www.sama-tv.net/ar/rss",
+      "https://news.google.com/rss/search?q=site:sama-tv.net+when:2d&hl=ar&gl=SY&ceid=SY:ar"
+    ]
+  },
+  {
+    "id": "baladinews",
+    "name": "بلدي نيوز",
+    "lang": "ar",
+    "urls": [
+      "https://www.baladi-news.com/ar/rss",
+      "https://www.baladi-news.com/feed",
+      "https://news.google.com/rss/search?q=site:baladi-news.com+when:2d&hl=ar&gl=SY&ceid=SY:ar"
+    ]
+  },
+  {
+    "id": "enabbaladi",
+    "name": "عنب بلدي",
+    "lang": "ar",
+    "urls": [
+      "https://www.enabbaladi.net/feed",
+      "https://www.enabbaladi.net/feed/",
+      "https://news.google.com/rss/search?q=site:enabbaladi.net+when:2d&hl=ar&gl=SY&ceid=SY:ar"
+    ]
+  }
+]
