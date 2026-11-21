@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#b3122e">
+<title>الموجز اليومي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+<header class="mast">
+  <div class="mast-top">
+    <div>
+      <h1>الموجز اليومي</h1>
+      <p class="sub"><span id="today"></span> · <span id="updated">جارٍ التحميل…</span></p>
+    </div>
+    <nav class="actions" aria-label="أدوات التقرير">
+      <button id="btnRefresh" class="btn primary" title="تحديث التقرير"><span class="ico">⟳</span> تحديث</button>
+      <button id="btnPdf" class="btn" title="تصدير التقرير PDF">تصدير PDF</button>
+      <button id="btnSave" class="btn" title="حفظ التقرير في السلة">حفظ</button>
+      <button id="btnBasket" class="btn" title="سلة التقارير">السلة <b id="basketCount" class="badge">0</b></button>
+      <button id="btnTr" class="btn" title="ترجمة الأخبار الأجنبية">الترجمة</button>
+      <button id="btnTheme" class="btn" title="الوضع الليلي">ليلي/نهاري</button>
+    </nav>
+  </div>
+
+  <form id="filters" class="filters" autocomplete="off">
+    <label class="field grow">
+      <span>ابحث عن موضوع</span>
+      <input id="q" type="search" placeholder="مثال: النفط، الانتخابات، الذكاء الاصطناعي">
+    </label>
+    <label class="field">
+      <span>الدولة</span>
+      <select id="country"><option value="">كل الدول</option></select>
+    </label>
+    <label class="field">
+      <span>المصدر</span>
+      <select id="source"><option value="">كل المصادر</option></select>
+    </label>
+    <label class="field">
+      <span>الفترة</span>
+      <select id="range">
+        <option value="6">آخر 6 ساعات</option>
+        <option value="24" selected>آخر 24 ساعة</option>
+        <option value="48">آخر 48 ساعة</option>
+      </select>
+    </label>
+  </form>
+  <div id="cats" class="chips" role="group" aria-label="التصنيفات"></div>
+</header>
+
+<main id="report">
+  <div id="viewBanner" class="banner" hidden></div>
+
+  <section class="digest">
+    <div class="digest-main">
+      <h2>ملخص اليوم</h2>
+      <ol id="summary" class="summary"></ol>
+    </div>
+    <aside class="digest-side">
+      <h3>الأكثر تداولاً</h3>
+      <div id="trending" class="chips small"></div>
+      <h3>توزيع الأخبار</h3>
+      <div id="stats" class="stats"></div>
+    </aside>
+  </section>
+
+  <div class="list-head">
+    <h2 id="listTitle">كل الأخبار</h2>
+    <span id="resultCount" class="muted"></span>
+  </div>
+  <section id="list" class="list" aria-live="polite"></section>
+  <button id="more" class="btn wide" hidden>عرض المزيد</button>
+  <p class="foot muted">الأخبار من خلاصات RSS الرسمية للمصادر، وكل عنوان يفتح في موقع الوسيلة الإعلامية.</p>
+  <p class="copy">جميع الحقوق محفوظة © <span id="year">2026</span> باسم أبو أنس</p>
+</main>
+
+<!-- السلة -->
+<div id="drawer" class="drawer" hidden>
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+    <div class="drawer-head">
+      <h2 id="drawerTitle">السلة</h2>
+      <button class="btn icon" data-close aria-label="إغلاق">✕</button>
+    </div>
+    <div class="tabs" role="tablist">
+      <button role="tab" class="tab on" data-tab="saved">تقاريري</button>
+      <button role="tab" class="tab" data-tab="archive">الأرشيف التلقائي</button>
+      <button role="tab" class="tab" data-tab="favs">الأخبار المفضلة</button>
+    </div>
+    <div id="drawerBody" class="drawer-body"></div>
+  </div>
+</div>
+
+<!-- نافذة حفظ -->
+<div id="saveDlg" class="drawer center" hidden>
+  <form class="dialog" id="saveForm">
+    <h2>حفظ التقرير</h2>
+    <label class="field"><span>اسم التقرير</span><input id="saveName" required maxlength="80"></label>
+    <label class="field"><span>ملاحظة (اختياري)</span><textarea id="saveNote" rows="2" maxlength="300"></textarea></label>
+    <div class="row-end">
+      <button type="button" class="btn" data-close>إلغاء</button>
+      <button class="btn primary">حفظ</button>
+    </div>
+  </form>
+</div>
+
+<div id="toast" class="toast" role="status" hidden></div>
+
+<script src="app.js" defer></script>
+</body>
+</html>
