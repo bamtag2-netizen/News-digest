@@ -143,5 +143,16 @@
       "https://www.enabbaladi.net/feed/",
       "https://news.google.com/rss/search?q=site:enabbaladi.net+when:2d&hl=ar&gl=SY&ceid=SY:ar"
     ]
-  }
+}
+  ,{
+    "id": "kuna",
+    "name": "كونا",
+    "lang": "ar",
+    "urls": [
+      "https://www.kuna.net.kw/Rss.aspx?language=ar",
+      "https://www.kuna.net.kw/rss/ar",
+      "https://news.google.com/rss/search?q=site:kuna.net.kw+when:2d&hl=ar&gl=KW&ceid=KW:ar"
+    ]
+  }  
+  
 ]
